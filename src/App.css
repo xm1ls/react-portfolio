@@ -6,7 +6,7 @@
   
   margin:3vh auto;
   padding: 1.9vh;
-
+  
   grid-template-areas: 
     "header header header"
     "sidebar main main"
