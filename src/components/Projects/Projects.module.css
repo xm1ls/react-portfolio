@@ -3,9 +3,9 @@
     transition: all .4s ease;
 
     grid-area: main-content;
-
+/* 
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 5px; */
 
     display: flex;
 
@@ -25,8 +25,8 @@
     transition: all .4s ease;
 
     color: black;
-    border-color: black; 
-    border-radius: 0px;
+    /* border-color: black; 
+    border-radius: 0px; */
     letter-spacing: -.3rem;
 
     text-decoration-line: underline;
