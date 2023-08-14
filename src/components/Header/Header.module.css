@@ -4,35 +4,38 @@
 
     background: transparent;
 
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-
+    transition: all .3s ease-out .1s;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 
-    transition: all .3s ease .1s;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 }
 
-/* .outer_container:hover {
-    transition: all .4s ease .1s;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
-} */
+.outer_container:is(:hover, :focus) {
+    z-index: 1;
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: all .3s ease;
+}
 
 .header {
-    display: flex;  
     grid-area: 1 / 1 / 1 / 1;
 
-    margin-inline-start: 2.6rem;
-    justify-content: start;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .about,
 .projects,
 .contacts {
     z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     font-size: 2rem;
     font-weight: 900;
@@ -82,14 +85,14 @@
     transition: all .3s ease-out .1s;
     border-radius: 5px;
     opacity: 1;
-    box-shadow: 3px 3px 0px 1px rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
 .item:is(:hover, :focus) {
     z-index: 1;
 
     /* scale: 1.1; */
-    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     transform: translate(-10px, -10px);
 
     transition: all .3s cubic-bezier(0.5, 1.75, 0.75, 1.25);

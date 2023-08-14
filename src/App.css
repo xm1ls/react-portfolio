@@ -4,7 +4,7 @@
   width: 50vw;
   height: 90vh;
   
-  margin:3vh auto;
+  margin: 3vh auto;
   padding: 1.9vh;
   
   grid-template-areas: 
@@ -17,4 +17,6 @@
   grid-template-columns: .5fr 1fr 1fr;
 
   gap: .4rem;
+
+  font-family: 'Times New Roman', Times, serif;
 } 

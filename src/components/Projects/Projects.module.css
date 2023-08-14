@@ -1,0 +1,36 @@
+.container {
+    z-index: 3;
+    transition: all .4s ease;
+
+    grid-area: main-content;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: rgba(0, 0, 0, 0.1);
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.05);
+
+    letter-spacing: -.1rem;
+}
+
+.container:is(:hover){
+    transition: all .4s ease;
+
+    color: black;
+    border-color: black; 
+    border-radius: 0px;
+    letter-spacing: -.3rem;
+
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: .1rem;
+    text-shadow: 0px -15px 3px black;
+}
