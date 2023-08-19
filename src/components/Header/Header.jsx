@@ -2,22 +2,25 @@ import { NavLink } from 'react-router-dom';
 import css from './Header.module.css';
 
 export const Header = () => {
+
+    const activeLink = ({isActive}) => isActive ? css.active : css.a;
+
     return (
         <div className={css.outer_container}>
             <div className={css.header}>
-                <NavLink to='/about' className={navData => navData.isActive ? css.active : css.a}>
+                <NavLink to='/about' className={activeLink}>
                     <p className={css.about}>
                         /about.
                     </p>
                 </NavLink>
 
-                <NavLink to='/projects' className={navData => navData.isActive ? css.active : css.a}>
+                <NavLink to='/projects' className={activeLink}>
                     <p className={css.projects}>
                         /projects.
                     </p>
                 </NavLink>
 
-                <NavLink to='/contacts' className={navData => navData.isActive ? css.active : css.a}>
+                <NavLink to='/contacts' className={activeLink}>
                     <p className={css.contacts}>
                         /contacts.
                     </p>

@@ -9,9 +9,13 @@ import { BrowserRouter } from 'react-router-dom';
 // import { Contacts } from './components/Contacts/Contacts'
 
 function App() {
+
+  const grid_side = { gridTemplateAreas: `'header header header' 'sidebar main main''sidebar main main'` };
+  const grid = { gridTemplateAreas: `'header header header' 'main main main''main main main'` };
+
   return (
     <BrowserRouter>
-      <div className='app'>
+      <div className='app' /*style={window.location.pathname != '/projects' ? grid : grid_side}*/>
         <Header />
         <Sidebar />
         <Main />
