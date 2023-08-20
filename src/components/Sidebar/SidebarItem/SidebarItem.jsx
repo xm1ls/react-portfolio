@@ -3,7 +3,7 @@ import css from './SidebarItem.module.css'
 
 export const SidebarItem = (props) => {
 
-    const activeLink = ({isActive}) => isActive ? css.active : css.a;
+    const activeLink = ({isActive}) => isActive ? css.active : css.navlink;
 
     return (
         <NavLink to={`/projects/${props.text}`} className={activeLink}>

@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {state} from './redux/state'
+
+// let ProjectRoute = projects_links.map((l) => <Route path={`/projects/${l}`} element={<ProjectItem text={l} />} />)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App state={state}/>
   </React.StrictMode>
 );
 

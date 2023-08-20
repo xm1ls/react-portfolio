@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 // import { Projects } from './components/Projects/Projects'
 // import { Contacts } from './components/Contacts/Contacts'
 
-function App() {
+function App(props) {
 
   const grid_side = { gridTemplateAreas: `'header header header' 'sidebar main main''sidebar main main'` };
   const grid = { gridTemplateAreas: `'header header header' 'main main main''main main main'` };
@@ -17,8 +17,8 @@ function App() {
     <BrowserRouter>
       <div className='app' /*style={window.location.pathname != '/projects' ? grid : grid_side}*/>
         <Header />
-        <Sidebar />
-        <Main />
+        <Sidebar state={props.state}/>
+        <Main state={props.state}/>
       </div>
     </BrowserRouter>
   );
