@@ -8,13 +8,13 @@ export const Main = (props) => {
         <div className={css.container}>
             <Routes>
                 {
-                    props.state.header_links.map(
+                    props.state.headerPage.header_links.map(
                         l => <Route path={`/${l}`} element={<HeaderItem text={`/${l}`} />} />
                     )
                 }
 
                 {
-                    props.state.projects_links.map(
+                    props.state.projectsPage.projects_links.map(
                         l => <Route path={`/projects/${l}`} element={<ProjectItem text={l} />} />
                     )
                 }
