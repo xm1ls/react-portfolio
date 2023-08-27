@@ -25,6 +25,7 @@ export let projectsReducer = (state = initialState, action) => {
             return state;
         
         case CHANGE_PROJECT:
+            debugger
             state.new_project_text = action.text;
 
             return state;

@@ -18,7 +18,8 @@ let rerender = (state) => {
 }
 
 rerender(store.getState());
-store.surscribe(() => { rerender(store.getState()) });
+
+store.subscribe(() => rerender(store.getState()));
 
 
 
