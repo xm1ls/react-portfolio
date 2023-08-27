@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { store } from './redux/store'
+import { store } from './redux/redux-store'
 
 // let ProjectRoute = projects_links.map((l) => <Route path={`/projects/${l}`} element={<ProjectItem text={l} />} />)
 
@@ -12,13 +12,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 let rerender = (state) => {
   root.render(
     <React.StrictMode>
-      <App state={state} dispatch={store.dispatch.bind(store)}/>
+      <App state={state} dispatch={store.dispatch.bind(store)} />
     </React.StrictMode>
   );
 }
 
 rerender(store.getState());
-store.surscribe(rerender);
+store.surscribe(() => { rerender(store.getState()) });
 
 
 
