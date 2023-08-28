@@ -19,16 +19,19 @@ export let projectsReducer = (state = initialState, action) => {
     switch(action.type) {
         case ADD_PROJECT:
             if (state.new_project_text !== '') {
-                state.projects_links.push(state.new_project_text);
+                return {
+                    ...state,
+                    projects_links: [...state.projects_links, state.new_project_text]
+                }
             }
-
-            return state;
+            else
+                return state;
         
         case CHANGE_PROJECT:
-            debugger
-            state.new_project_text = action.text;
-
-            return state;
+            return {
+                ...state,
+                new_project_text: action.text
+            }
 
         default:
             return state;
